@@ -14,13 +14,13 @@ const reducer = (state = initialState, action) => {
         }
    
 
-    } else if ( type === "color"){
+    }  if ( type === "color"){
         return{
 value: state.value ,
 color: color
         }
 
-    }else if (type ==="RESETVALUE"){
+    } if (type ==="RESETVALUE"){
 return{
     value: value,
     color: state.color
