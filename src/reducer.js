@@ -7,20 +7,19 @@ const reducer = (state = initialState, action) => {
     let { type ,value,color} = action;
 
 
-    if (type === "CHANGEVALUE") {
+    switch (type ) {
+        case "CHANGEVALUE":
         return {
             value: state.value + value,
             color: state.color
         }
-   
-
-    }  if ( type === "color"){
+   case "color" :
         return{
 value: state.value ,
 color: color
         }
-
-    } if (type ==="RESETVALUE"){
+case "RESETVALUE":
+   
 return{
     value: value,
     color: state.color
